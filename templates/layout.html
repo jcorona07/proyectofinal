@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>VENTA DE AUTOS</title>
+    <!-- BOOTSTRAP 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('inicio') }}">PAG VENTA DE AUTOS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('inicio') }}">INICIO</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('acerca') }}">CAFES</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('contactos') }}">CONTACTO</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('portafolio') }}">CLASIFICADO</a>
+          </li>
+         <!-- <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('servicios') }}">PAGINA 5</a>
+          </li> -->
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('consulta') }}">CONSULTA CLASIFICADO</a>
+          </li
+        </ul>
+      </div>
+    </nav>
+  
+
+    <div class="container p-4">
+      {% block content %}
+      {% endblock%}
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>

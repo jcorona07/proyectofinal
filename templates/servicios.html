@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Servicios de Venta de Autos</h2>
+
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>description</th>
+            <th>precio</th>
+        </tr>
+        {% for resultado in resultados %}
+        <tr>
+            <td>{{ resultado.id }}</td>
+            <td>{{ resultado.title }}</td>
+            <td>{{ resultado.description }}</td>
+            <td>{{ resultado.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock%}
