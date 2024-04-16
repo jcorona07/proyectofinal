@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-'''
+
 db_config = {
     'host': 'localhost',  
     'user': 'root',
@@ -42,7 +42,7 @@ def get_data():
     else:
         print(f"Error: {response.status_code}")
 
-'''
+
 
 # Creating simple Routes ____________________________________________________________________________________________
 @app.route('/test')
